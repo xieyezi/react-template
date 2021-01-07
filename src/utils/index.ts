@@ -164,10 +164,6 @@ export function getParentIdList(list, idArr) {
 		return tempArr
 	}
 }
-interface IObj {
-	[key: string]: any
-}
-
 /**
  * 判断某个对象是否不含任何实际可用值
  * @param value 对象

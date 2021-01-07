@@ -1,5 +1,5 @@
 import { message } from 'antd'
-import { app as store } from '@/App'
+// import { app as store } from '@/App'
 // import { namespace } from '@/models/login'
 
 const errorCode = {

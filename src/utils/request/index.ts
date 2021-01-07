@@ -10,7 +10,7 @@ type requestOptions = AxiosRequestConfig & {
 	noLoading?: boolean
 	body?: any
 	headers?: any
-} 
+}
 const { SERVER_API_URL, authKey } = systemConfig
 
 axios.interceptors.response.use(
