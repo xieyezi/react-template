@@ -4,13 +4,15 @@ import axios, { AxiosRequestConfig } from 'axios'
 import { app as store } from '@/App'
 import { errorCode, errorMsg, handleCommonError, handleNoCommontError } from './errorHandle'
 import qs from 'qs'
+
 type requestOptions = AxiosRequestConfig & {
 	url: string
 	noLoading?: boolean
 	body?: any
 	headers?: any
-}
-const { baseUrl, authKey } = systemConfig
+} 
+const { SERVER_API_URL, authKey } = systemConfig
+
 axios.interceptors.response.use(
 	(response: any) => {
 		store._store.dispatch({
@@ -107,7 +109,6 @@ export default async function request(options: requestOptions) {
 			}
 		})
 	}
-	const newUrl = baseUrl + url
-	// const newUrl = hasApi ? baseUrl + url : url
+	const newUrl = SERVER_API_URL + url
 	return axios(newUrl, newOptions)
 }

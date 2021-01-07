@@ -1,6 +1,6 @@
 import { message } from 'antd'
 import { app as store } from '@/App'
-import { namespace } from '@/models/login'
+// import { namespace } from '@/models/login'
 
 const errorCode = {
 	c10002: 10002,
@@ -20,10 +20,9 @@ function handleCommonError(err, config) {
 		case errorCode.c1004001006:
 		case errorCode.c10020: {
 			// TODO:跳转到登陆页面
-			store._store.dispatch({
-				type: `${namespace}/logout`
-			})
-
+			// store._store.dispatch({
+			// 	type: `${namespace}/logout`
+			// })
 			break
 		}
 		default: {

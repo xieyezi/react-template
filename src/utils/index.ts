@@ -3,7 +3,6 @@ import config from '@/config'
 import Axios from 'axios'
 import _ from 'lodash'
 import { parse } from 'qs'
-import { ActionType } from '@/pages/goods-manage/shopping-recommend/add/components/editable-table/editable-table'
 /**
  * 根据文件base64
  */
@@ -258,33 +257,6 @@ export const exportFile = (url, params, removeTime = 4000) => {
 export function renderWithSpliter(brefore = '', after = '', spliter = '/') {
 	const useSpliter = !!brefore && !!after
 	return `${brefore}${useSpliter ? spliter : ''}${after}`
-}
-
-/**
- * 根据操作类型，位移列表数据
- * @param list 列表
- * @param id 目标元素
- * @param type 操作类型
- */
-export function shiftItem(list = [], targetId, type) {
-	let newList = []
-	const targetItem = list.find((e) => e.id === targetId)
-	const targetItemIndex = list.findIndex((e) => e.id === targetId)
-	newList = list.filter((e) => e.id !== targetId)
-	switch (type) {
-		case ActionType.Top:
-			newList.splice(0, 0, targetItem)
-			break
-		case ActionType.Up:
-			newList.splice(targetItemIndex - 1, 0, targetItem)
-			break
-		case ActionType.Down:
-			newList.splice(targetItemIndex + 1, 0, targetItem)
-			break
-		default:
-			break
-	}
-	return newList
 }
 
 export function executeCallback(callback) {

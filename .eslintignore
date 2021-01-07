@@ -11,6 +11,3 @@ config-overrides.js
 
 serviceWorker.ts
 
-commitlint.config.js
-
-.eslintrc.js

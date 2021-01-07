@@ -4,7 +4,8 @@ module.exports = {
 	plugins: ['@typescript-eslint'],
 	extends: [
 	  'eslint:recommended',
-	  'plugin:@typescript-eslint/recommended'
+	  'plugin:@typescript-eslint/recommended',
+	  'react-app'
 	],
 	rules: {
 	  '@typescript-eslint/interface-name-prefix': 0,
