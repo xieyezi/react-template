@@ -1,5 +1,5 @@
 {
-  "originUrl": "http://172.26.1.73:9002/api/buyer/v2/api-docs",
+  "originUrl": "",
   "outDir": "./src/services",
   "templatePath": "./apiTemplate",
   "prettierConfig": {

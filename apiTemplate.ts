@@ -1,10 +1,10 @@
 import { CodeGenerator, Interface } from 'pont-engine'
 
 const noLoadingApis = ['/order/create', '/share/image', '/agent_order/new/page/count']
-const noTipsApis = ['/share/image']
+// const noTipsApis = ['/share/image']
 export default class MyGenerator extends CodeGenerator {
   getInterfaceContent(inter: Interface) {
-    const requestBodyParams = inter.parameters.find(it => it.in === 'body')
+    // const requestBodyParams = inter.parameters.find(it => it.in === 'body')
     const bodyParmas = inter.getBodyParamsCode()
 
     const queryParamsType = 'IQueryParams'
