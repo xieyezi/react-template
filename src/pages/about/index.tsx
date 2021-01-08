@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { IDispatch } from '@/models/connect'
 import { namespace, IDvaState } from '@/models/about'
 import { Input, Button } from 'antd'
+import styles from './style.module.scss'
 
 interface IProps extends IDvaState, IDispatch {}
 
@@ -22,11 +23,13 @@ const AboutPage: React.FC<IProps> = ({ dispatch, info }) => {
 	}
 
 	return (
-		<div>
+		<div className={styles.about}>
 			<h1>This is an about page</h1>
 			<p>{info}</p>
-			<Input onChange={handleInputChange}></Input>
-			<Button onClick={changeInfo}></Button>
+			<Input placeholder="input something to change info..." onChange={handleInputChange}></Input>
+			<Button type="primary" onClick={changeInfo}>
+				change Info
+			</Button>
 		</div>
 	)
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Button } from 'antd'
 import styles from './style.module.scss'
+import logo from '../../logo.svg'
 
 interface IProps {}
 
@@ -13,8 +14,11 @@ const HomePage: React.FC<IProps> = () => {
 
 	return (
 		<div className={styles.home}>
+			<img src={logo} className="App-logo" alt="logo" />
 			<h1>Welcome to React + TypeScript</h1>
-			<Button onClick={() => addCount(count + 1)}>{count}</Button>
+			<Button size="large" onClick={() => addCount(count + 1)}>
+				count is: {count}
+			</Button>
 		</div>
 	)
 }

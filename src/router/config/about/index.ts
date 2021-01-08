@@ -6,7 +6,6 @@ const routes: IRouteConfig[] = [
 	{
 		path: ABOUT,
 		component: AboutPage,
-		exact: true,
 		pageTitle: '关于'
 	}
 ]

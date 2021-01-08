@@ -9697,10 +9697,10 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-pont-engine@1.0.10:
-  version "1.0.10"
-  resolved "https://registry.npm.taobao.org/pont-engine/download/pont-engine-1.0.10.tgz"
-  integrity sha1-w82Cgpm+c6CuiYOBd6B6w0BxU4g=
+pont-engine@1.0.13:
+  version "1.0.13"
+  resolved "https://registry.npm.taobao.org/pont-engine/download/pont-engine-1.0.13.tgz#763d942f7bc15bd2e46e715c1d39f29faf054edf"
+  integrity sha1-dj2UL3vBW9LkbnFcHTnyn68FTt8=
   dependencies:
     chalk "^2.3.0"
     commander "^2.19.0"

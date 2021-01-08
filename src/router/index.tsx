@@ -6,21 +6,9 @@ const Router: React.FC = () => {
 	return (
 		<Switch>
 			{routes.map((item) => {
-				// if (item.auth) {
-				// 	return (
-				// 		<Route
-				// 			key={item.path}
-				// 			render={() => {
-				// 				const Comp = item.component
-				// 				return <Comp />
-				// 			}}
-				// 		/>
-				// 	)
-				// }
-				return <Route key={item.path} component={item.component} />
+				return <Route exact={item.exact} key={item.path} path={item.path} component={item.component} />
 			})}
 		</Switch>
 	)
 }
-
 export default Router
